@@ -6,7 +6,6 @@ import threading
 print("Criando a janela")
 janela = tk.Tk()
 
-# janela.title = "Aprendendo a interface"
 janela.geometry('500x400')
 
 i = 0
@@ -25,6 +24,7 @@ def demora():
 
 def faz_demorado_paralelo():
     new_thread = threading.Thread(target=demora)
+    #criando uma outra thread para você pode usar o programa enquanto o comando demora está sendo executado.
     new_thread.start()
 
 rotulo = ttk.Label(janela, textvariable=texto_no_rotulo)
